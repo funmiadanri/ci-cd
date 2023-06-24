@@ -1,9 +1,9 @@
 
-name: GitHub Actions Demo
+name: merge cd
 on: [ push ]
 jobs:
   Test:
-    runs-on: windows-latest
+    runs-on: { ubuntu-latest, windows-latest, macos-latest }
     steps: 
       - uses: actions/checkout@v2
       - run: echo "The job was automatically triggered by s{{github.event_name}}event."
